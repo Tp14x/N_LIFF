@@ -10,6 +10,22 @@
         <link rel="icon" type="image/png" href="https://github.com/HELLTERHEAD-Corp/HELLTERHEAD-Corp.github.io/blob/main/assets/M_hlth_profile.png"/>
         <link rel="shortcut icon" type="image/png" href="https://github.com/HELLTERHEAD-Corp/HELLTERHEAD-Corp.github.io/blob/main/assets/M_hlth_profile.png"/>
         <link rel="stylesheet" href="style.css"/>
+        <style>
+            /* ให้ปุ่มแสดงอย่างชัดเจนและสามารถคลิกได้ */
+            #unmuteButton {
+                position: relative;
+                z-index: 10; /* ทำให้ปุ่มอยู่ข้างหน้าทุกองค์ประกอบ */
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: rgba(0, 0, 0, 0.6);
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                display: block;
+                margin: 20px auto;
+            }
+        </style>
     </head>
     <body>
         <div class="animation-wrapper">
@@ -21,14 +37,14 @@
         <center>
             <div class="buttons">
                 <div class="container">
-                    <!-- วิดีโอที่เล่นอัตโนมัติในโหมด muted -->
+                    <!-- ฝังวิดีโอที่เล่นอัตโนมัติในโหมด muted -->
                     <video id="videoPlayer" width="560" height="315" autoplay muted loop>
                         <source src="assets/Snaptik.app_7298944441643994373.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
 
                     <!-- ปุ่มเปิดเสียงเมื่อคลิก -->
-                    <button id="unmuteButton" onclick="unmuteVideo()">เปิดเสียง~</button>
+                    <button id="unmuteButton" onclick="unmuteVideo()">กดเพื่อเปิดเสียง~</button>
 
                     <h2><a style="color: black">Suradet Konsan._.N</a></h2>
                     <p>LINE Front-end Framework</p>
