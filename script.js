@@ -1,12 +1,14 @@
 document.getElementById("unmuteButton").addEventListener("click", function() {
     var video = document.getElementById("videoPlayer");
 
-    // เปลี่ยนวิดีโอให้ไม่เป็น muted และเล่นเสียง
+    // เช็คว่าเสียงของวิดีโอถูกปิดหรือไม่
     if (video.muted) {
-        video.muted = false;
-        this.classList.add("explode"); // เพิ่มคลาส explode เพื่อทำให้ปุ่มแตกสลาย
+        video.muted = false;  // เปิดเสียง
+        this.classList.add("explode");  // เพิ่มคลาส explode เพื่อทำให้ปุ่มแตกสลาย
+
+        // ซ่อนปุ่มหลังจากแอนิเมชัน
         setTimeout(() => {
-            this.style.display = 'none'; // ซ่อนปุ่มหลังจากที่มันแตกสลาย
-        }, 500); // หลังจากแอนิเมชัน
+            this.style.display = 'none';  // ซ่อนปุ่มหลังจากแอนิเมชันเสร็จ
+        }, 500); // เวลาเดียวกับแอนิเมชัน
     }
 });
