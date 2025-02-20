@@ -195,7 +195,7 @@ p {
   display: block;
   margin: 0 auto 10px auto; /* จัดให้อยู่ตรงกลาง */
 }
-/* CSS สำหรับปุ่ม */
+/* การตกแต่งปุ่ม */
 #unmuteButton {
     position: relative;
     padding: 15px 30px;
@@ -211,13 +211,13 @@ p {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* เพิ่มเอฟเฟ็กต์เมื่อ hover ที่ปุ่ม */
+/* เมื่อ hover ที่ปุ่ม */
 #unmuteButton:hover {
     background-color: rgba(0, 0, 0, 0.9);
     transform: scale(1.05);
 }
 
-/* การแตกสลายของปุ่ม */
+/* แอนิเมชันของปุ่มที่จะแตกสลาย */
 @keyframes buttonExplosion {
     0% {
         transform: scale(1);
@@ -225,7 +225,7 @@ p {
     }
     50% {
         transform: scale(1.5);
-        opacity: 0.5;
+        opacity: 0.7;
     }
     100% {
         transform: scale(0);
@@ -233,7 +233,7 @@ p {
     }
 }
 
-/* คลาสที่ใช้ในการแตกสลาย */
+/* คลาสที่ใช้ในการทำให้ปุ่มแตกสลาย */
 .explode {
     animation: buttonExplosion 0.5s forwards;
 }
