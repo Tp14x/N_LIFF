@@ -10,22 +10,6 @@
         <link rel="icon" type="image/png" href="https://github.com/HELLTERHEAD-Corp/HELLTERHEAD-Corp.github.io/blob/main/assets/M_hlth_profile.png"/>
         <link rel="shortcut icon" type="image/png" href="https://github.com/HELLTERHEAD-Corp/HELLTERHEAD-Corp.github.io/blob/main/assets/M_hlth_profile.png"/>
         <link rel="stylesheet" href="style.css"/>
-        <style>
-            /* ให้ปุ่มแสดงอย่างชัดเจนและสามารถคลิกได้ */
-            #unmuteButton {
-                position: relative;
-                z-index: 10; /* ทำให้ปุ่มอยู่ข้างหน้าทุกองค์ประกอบ */
-                padding: 10px 20px;
-                font-size: 16px;
-                background-color: rgba(0, 0, 0, 0.6);
-                color: white;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                display: block;
-                margin: 20px auto;
-            }
-        </style>
     </head>
     <body>
         <div class="animation-wrapper">
@@ -37,14 +21,14 @@
         <center>
             <div class="buttons">
                 <div class="container">
-                    <!-- ฝังวิดีโอที่เล่นอัตโนมัติในโหมด muted -->
+                    <!-- ฝังวิดีโอ -->
                     <video id="videoPlayer" width="560" height="315" autoplay muted loop>
                         <source src="assets/Snaptik.app_7298944441643994373.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
+                        แย่เลย! browser ของคุณไม่สามารถเล่นเพลงนี้ได้ แต่ผมก็อยากให้คุณได้ฟัง พยายามเข้านะ!.
                     </video>
 
-                    <!-- ปุ่มเปิดเสียงเมื่อคลิก -->
-                    <button id="unmuteButton" onclick="unmuteVideo()">กดเพื่อเปิดเสียง~</button>
+                    <!-- ปุ่มที่แตกสลายเมื่อคลิก -->
+                    <button id="unmuteButton">กด = แตกสลายเหมือนความรู้สึก</button>
 
                     <h2><a style="color: black">Suradet Konsan._.N</a></h2>
                     <p>LINE Front-end Framework</p>
@@ -53,19 +37,6 @@
                 </div>
             </div>
         </center>
-        <script src="https://static.line-scdn.net/liff/edge/versions/2.24.0/sdk.js"></script>
-        <script src="liff-starter.js"></script>
-
-        <script>
-            // ฟังก์ชันที่จะเปิดเสียงเมื่อคลิกปุ่ม
-            function unmuteVideo() {
-                var video = document.getElementById('videoPlayer');
-                var button = document.getElementById('unmuteButton');
-                
-                video.muted = false;  // เปิดเสียง
-                button.style.display = 'none';  // ซ่อนปุ่ม
-                video.play();  // เริ่มเล่นวิดีโอ
-            }
-        </script>
+        <script src="script.js"></script>
     </body>
 </html>
