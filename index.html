@@ -21,11 +21,14 @@
         <center>
             <div class="buttons">
                 <div class="container">
-                    <!-- ฝังวิดีโอที่ไม่มีปุ่มควบคุม -->
-                    <video width="560" height="315" autoplay loop>
+                    <!-- ฝังวิดีโอที่เล่นอัตโนมัติแต่ไม่มีเสียง -->
+                    <video id="videoPlayer" width="560" height="315" autoplay muted loop>
                         <source src="assets/Snaptik.app_7298944441643994373.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
+
+                    <!-- ปุ่มที่ใช้เพื่อเปิดเสียงเมื่อคลิก -->
+                    <button id="unmuteButton" onclick="unmuteVideo()">Click to Unmute</button>
 
                     <h2><a style="color: black">Suradet Konsan._.N</a></h2>
                     <p>LINE Front-end Framework</p>
@@ -36,5 +39,17 @@
         </center>
         <script src="https://static.line-scdn.net/liff/edge/versions/2.24.0/sdk.js"></script>
         <script src="liff-starter.js"></script>
+
+        <script>
+            // ฟังก์ชันที่จะเปิดเสียงเมื่อคลิกปุ่ม
+            function unmuteVideo() {
+                var video = document.getElementById('videoPlayer');
+                var button = document.getElementById('unmuteButton');
+                
+                video.muted = false;  // เปิดเสียง
+                button.style.display = 'none';  // ซ่อนปุ่ม
+                video.play();  // เริ่มเล่นวิดีโอ
+            }
+        </script>
     </body>
 </html>
